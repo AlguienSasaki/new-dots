@@ -1,5 +1,7 @@
 # Esto usa markdown no?
 
+![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/1.png  "Captura incial")
+
 ## Software used
 
 | Funtionality      | Program    |
@@ -19,6 +21,5 @@
 
 
 
-![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/1.png  "Optional title")
 
 $\frac{1}{2}$
