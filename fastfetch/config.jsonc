@@ -1,0 +1,57 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+          "separator": " ➜  "
+    },
+  "modules": [
+    "title",
+    "separator",
+    {
+            "type": "os",
+            "key": "OS   "
+    },
+         {
+            "type": "kernel",
+            
+            "key": "{#green}├ {#35}  | カーネル "
+        },
+    {
+      "type": "uptime",
+      "key": "{#green}├ {#35}  | 稼働時間"
+    },
+    {
+      "type" : "packages",
+      "key" : "{#green}├ {#35}  | パッケージ"
+    },
+    {
+      "type" : "host",
+      "key" : "HostName"
+    },
+    {
+      "type" : "cpu",
+      "key" : "{#green}├ {#35}  | プロセッサー"
+    },
+    {
+      "type" : "memory",
+      "key" : "{#green}├ {#35}  | メモリー"
+    },
+    {
+      "type" : "disk",
+      "key" : "{#green}├ {#35}  | ハードドライブ"
+    },
+
+    "de",
+    {
+      "type" : "wm",
+      "key" : "{#green}├ {#35}  | WM"
+    },
+    "terminal",
+    {
+      "type" : "shell",
+      "key" : "{#green}├ {#35}  | シェル"
+    },
+    "break",
+    "colors"
+  ]
+}
+

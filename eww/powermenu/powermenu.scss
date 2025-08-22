@@ -1,0 +1,44 @@
+window>.powermenu {
+  margin: .5rem;
+  background-color: $bg;
+  /*border: 1px solid #fff; */
+}
+
+.powermenu {
+  font-family: "Font Awesome 6 Free Solid";
+  font-size: 1.5rem;
+  padding: .3rem;
+  border-radius: .5rem;
+  
+
+  &.shutdown {
+    color: #fff;
+    background-color: #f2cdcd;
+  }
+
+  &.reboot {
+    color: #fff;
+    background-color: #a6e3a1;
+    
+  }
+
+  &.lock {
+    color: #fff;
+    background-color: #f9e2af;
+  }
+
+  &.exit {
+    background-color: #cba6f7;
+    color: #fff;
+  }
+
+  button {
+    background-color: $bg;
+    padding: 1.2rem;
+    padding-right: 1.5rem;
+
+  &:hover {
+      background-color: lighten($color: $bg-alt, $amount: 4%);
+    }  
+  }
+}

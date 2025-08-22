@@ -1,0 +1,45 @@
+(defwidget powermenu []
+     (box :class "powermenu"
+     	  :monitor 0
+          :orientation "v"
+          :space-evenly "false"
+          (lock-power-restart)))
+
+
+(defwidget lock-power-restart []
+	(box :class "powermenu"
+     	         :monitor 0
+		 :orientation "v"
+		 :spacing 10
+    (eventbox :cursor "pointer"
+		(button :class "powermenu lock" 
+				:onclick "exec hyprlock -c ~/.config/hypr/hyprlock.conf"
+				:tooltip "Lock session"
+				""))
+    (eventbox :cursor "pointer"
+		(button :class "powermenu exit" 
+				:onclick "kill -9 -1" 
+				:tooltip "Quit session"
+				""))
+    (eventbox :cursor "pointer"
+		(button :class "powermenu reboot" 
+				:onclick "reboot"
+				:tooltip "Restart"
+				""))
+    (eventbox :cursor "pointer"
+		(button :class "powermenu shutdown" 
+				:onclick "shutdown -h now"
+				:tooltip "Shutdown"
+				""))     
+  )
+)
+
+;; Power Menu ;;
+(defwindow powermenu
+    :geometry (geometry :x "1px"
+     	         	:monitor 0
+                        :y "10%"
+                        :anchor "center right")
+    :wm-ignore false 
+    (powermenu))
+    
