@@ -32,6 +32,8 @@
 
 ![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/4.png  "Captura incial")
 
+![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/5.png  "Captura incial")
+
 ## Credits
 
 I didn't write all the code by myself, I took inspiration from other projects and dotfiles, but I heavily moddified them in order to adapted them to my needs and preferences
