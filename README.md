@@ -12,10 +12,10 @@
 | System Infromation| [fastfetch](https://github.com/fastfetch-cli/fastfetch) | 
 | File Manager    | [yazi](https://github.com/sxyazi/yazi)      |
 | App-Launcher        | [fuzzel](https://codeberg.org/dnkl/fuzzel)          |
-| Widgets| [eww](https://codeberg.org/dnkl/fuzzel) |
+| Widgets| [eww](https://github.com/elkowar/eww) |
 | Visualiser    | [cava](https://github.com/karlstav/cava)          |
 | Lockscreen      | [hyprlock](https://github.com/hyprwm/hyprlock)  |
-| Login Menu      | [greetd](https://github.com/sddm/sddm), + [tuigreet](https://github.com/apognu/tuigreet)          |
+| Login Menu      | [greetd](https://github.com/kennylevinsen/greetd), + [tuigreet](https://github.com/apognu/tuigreet)          |
 
 
 
