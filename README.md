@@ -2,6 +2,8 @@
 
 ![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/1.png  "Captura incial")
 
+---
+
 ## Software used
 
 | Funtionality      | Program    |
@@ -19,8 +21,9 @@
 | Lockscreen      | [hyprlock](https://github.com/hyprwm/hyprlock)  |
 | Login Menu      | [greetd](https://github.com/kennylevinsen/greetd) + [tuigreet](https://github.com/apognu/tuigreet)          |
 
-## Even More Screenshots
+---
 
+## Even More Screenshots
 
 ![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/2.png  "Captura incial")
 
