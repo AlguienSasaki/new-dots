@@ -2,8 +2,7 @@
 
 ## Subtitulo gnial
 
-Screenshot prrona
+
 ![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/1.png  "Optional title")
 
 $\frac{1}{2}$
-![Alt text](image-url-or-path "Optional title")
