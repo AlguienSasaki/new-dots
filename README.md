@@ -2,25 +2,20 @@
 
 ## Software used
 
-| Funtionality         | Program    |
-|----------------------|------------|
-| Windows Manager 🪟| [hyprland](https://github.com/hyprwm/Hyprland)  |
-| Terminal 🖥️       | [kitty](https://github.com/kovidgoyal/kitty)        |
-| Shell 🐚          | [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) / [theme](https://github.com/romkatv/powerlevel10k) |
-| Fetch 🖼️          | [catnip](https://github.com/iinsertNameHere/catnip) / [icon](https://www.pixiv.net/en/artworks/102563034) |
-| File Manager 📁   | [ranger](https://github.com/ranger/ranger)      |
-| Editor 📝         | [neovim](https://github.com/neovim/neovim) / [nvchad](https://github.com/NvChad/NvChad)     |
-| Browser 🌐        | [firefox](https://github.com/topics/firefox-browser) / [startpage](https://github.com/Nainish-Rai/aesthetic-startpage) / [startpage wal](https://www.pixiv.net/en/artworks/115813778)|
-| Bar 📊            | [waybar](https://github.com/Alexays/Waybar)      |
-| Launcher 🚀       | [rofi](https://github.com/davatorium/rofi)          |
-| Color Theme 🎨    | [pywal](https://github.com/dylanaraps/pywal) |
-| Lockscreen 🔒     | [hyprlock](https://github.com/hyprwm/hyprlock)  |
-| Login Menu 🚪     | [sddm](https://github.com/sddm/sddm)          |
-| Music Player 🎵   | [ncspot](https://github.com/hrkfdn/ncspot)      |
-| Visualiser 📊     | [cava](https://github.com/karlstav/cava)          |
-| Lyrics 🎤         | [sptlrx](https://github.com/raitonoberu/sptlrx)      |
-| Pomodoro 🍅       | [tomato-c](https://github.com/gabrielzschmitz/Tomato.C)      |
-| Others 🌱         | [cbonsai](https://github.com/mhzawadi/homebrew-cbonsai), [colorscripts](https://github.com/stark/Color-Scripts), [asciiquarium](https://github.com/cmatsuoka/asciiquarium) |
+| Funtionality      | Program    |
+|-------------------|------------|
+| Windows Manager | [niri](https://github.com/YaLTeR/niri)  |
+| Bar             | [waybar](https://github.com/Alexays/Waybar)      |
+| Terminal        | [kitty](https://github.com/ghostty-org/ghostty)        |
+| Shell           | [zsh + ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) / [powerlevel10k](https://github.com/romkatv/powerlevel10k) |
+| Editor          | [neovim](https://github.com/neovim/neovim) / [My own configs](https://github.com/AlguienSasaki/nvim-dots)     |
+| System Infromation| [catnip](https://github.com/fastfetch-cli/fastfetch) | 
+| File Manager    | [yazi](https://github.com/sxyazi/yazi)      |
+| App-Launcher        | [fuzzel](https://codeberg.org/dnkl/fuzzel)          |
+| Widgets| [eww](https://codeberg.org/dnkl/fuzzel) |
+| Visualiser    | [cava](https://github.com/karlstav/cava)          |
+| Lockscreen      | [hyprlock](https://github.com/hyprwm/hyprlock)  |
+| Login Menu      | [greetd](https://github.com/sddm/sddm), + [tuigreet](https://github.com/apognu/tuigreet)          |
 
 
 
