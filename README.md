@@ -15,7 +15,7 @@
 | Editor          | [neovim](https://github.com/neovim/neovim) + [My own configs](https://github.com/AlguienSasaki/nvim-dots)     |
 | System Infromation| [fastfetch](https://github.com/fastfetch-cli/fastfetch) | 
 | File Manager    | [yazi](https://github.com/sxyazi/yazi)      |
-| App-Launcher        | [fuzzel](https://codeberg.org/dnkl/fuzzel)          |
+| App-Launcher        | [rofi](https://github.com/davatorium/rofi)          |
 | Widgets| [eww](https://github.com/elkowar/eww) |
 | Visualiser    | [cava](https://github.com/karlstav/cava)          |
 | Lockscreen      | [hyprlock](https://github.com/hyprwm/hyprlock)  |
@@ -37,6 +37,12 @@
 ## Credits
 
 I didn't write all the code by myself, I took inspiration from other projects and dotfiles, but I heavily moddified them in order to adapted them to my needs and preferences
+
+* **Waybar**: [sameemul-haque's dotfiles](https://github.com/sameemul-haque/dotfiles/tree/mocha) + [nomeacuerdo](enlace ).
+I started my waybar setup using his config and some modules from the defaults.
+
+* **HyprLock**: [FireDrop6000's hyprland-mydots](https://github.com/FireDrop6000/hyprland-mydots) + [sameemul's Dotfiles](https://github.com/sameemul-haque/dotfiles/tree/mocha) I started with just one config, but I encoutered lots of bugs and made some sort of frankenstein with the config
+* **Swaync**: **[elifouts' Dotfiles](https://github.com/elifouts/Dotfiles)** It helped me to start my config. I want to say that for now it's not finished, but I'm working on it.
 
 
 

@@ -39,7 +39,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     //aquiw
     Mod+Return cooldown-ms=150 hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+Space hotkey-overlay-title="Run an Application: Rofi" { spawn "rofi" "-i" "-show-icons" "-no-lazy-grab" " -dpi" "95" "-show" "drun" "-modi" "drun" "-theme" "~/.config/rofi/config.rasi"; }  //{ spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: Hyprlock" { spawn "systemctl" "suspend" ; }
 
     Mod+N {spawn "~/wal.sh";}

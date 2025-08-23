@@ -19,6 +19,7 @@ keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+j=goto_split:bottom
 keybind = ctrl+shift+k=goto_split:top
 
+#theme = dark:"Abernathy" ,light:"Elementary"
 theme = dark:"ayu" ,light:"Elementary"
 gtk-adwaita=true
 desktop-notifications=true
