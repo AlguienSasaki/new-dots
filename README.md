@@ -45,7 +45,7 @@ Honestly I don't remember what the idea behind this theme was, but I still like 
 This is a readaptation from my favorite BSPWM theme, I don't remember exactly why the name is "Graveyard" but I'm sure 14 years old me taught this was the coolest thing ever.
 Initially I wanted to just call this "Graveyard" but I think it's kinda funny the new one.
 
-![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/6.png  "Un viejo conocido vuelve")
+![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/7.png  "Un viejo conocido vuelve")
 
 ## Credits
 
