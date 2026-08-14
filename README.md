@@ -1,4 +1,4 @@
-# Esto usa markdown no?
+# New Dotfiles!!!
 
 ![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/1.png  "Captura incial")
 
@@ -44,5 +44,11 @@ I started my waybar setup using his config and some modules from the defaults.
 * **HyprLock**: [FireDrop6000's hyprland-mydots](https://github.com/FireDrop6000/hyprland-mydots) + [sameemul's Dotfiles](https://github.com/sameemul-haque/dotfiles/tree/mocha) I started with just one config, but I encoutered lots of bugs and made some sort of frankenstein with the config
 * **Swaync**: **[elifouts' Dotfiles](https://github.com/elifouts/Dotfiles)** It helped me to start my config. I want to say that for now it's not finished, but I'm working on it.
 
+For the "Graveyard Revival" theme I got inspiration from my old bspwm+polybar dotfiles but now for niri+waybar:
 
+[Alguien Sasaki's Dotfiles](https://github.com/AlguienSasaki/Dotfiles)
+
+And those dotfiles used as a base Murzchnvok's polybar theme collection (specifically the "Murz" theme):
+
+[Murzchnvok's Murz theme:](https://github.com/Murzchnvok/polybar-collection)
 

@@ -1,0 +1,165 @@
+/* --- Estilos Globales --- */
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
+}
+
+/* --- Caja Principal de la Barra --- */
+window#waybar {
+    /* Negro puro con 65% de transparencia */
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    /* Redondeado opcional para la barra entera */
+}
+
+/* --- Estilo de los Módulos ("Pastillas") --- */
+#clock,
+#power-profiles-daemon,
+#battery,
+#network,
+#pulseaudio,
+#custom-powermenus,
+#custom-launcher,
+#workspaces{
+    /* Dimensiones solicitadas: 44px de ancho */
+    min-width: 44px;
+    /* max-width: 44px; */
+    /* Padding lateral de 10px */
+    margin-left: 10px;
+    margin-right: 11px;
+    
+    /* Margen vertical para separarlas */
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* Fondo oscuro para la "pastilla" (puedes ajustarlo) */
+    background-color: rgba(27, 31, 31, 1);
+    border-radius: 22px; /* Redondeado total para forma de pastilla */
+    
+    /* Centrado del contenido */
+    /* text-align: center;*/
+    color: #ffffff;
+}
+
+
+
+
+/* --- Los de abajo --- */
+
+#custom-launcher,
+#clock,
+#battery,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#custom-powermenus{
+    border-radius: 0px; /* Redondeado total para forma de pastilla */
+    color: #ffffff;
+}
+
+/* --- Ajustes específicos por módulo --- */
+
+#network{
+
+        padding-top: 11px;
+        padding-right: 4px;
+        border-radius: 22px 22px 0 0;
+
+}
+
+
+#clock {
+    border-radius: 0 0 22px 22px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 22px;
+}
+
+#workspaces button {
+    padding: 0;
+    margin: 5px 0;
+    /* Ancho completo del botón dentro de la pastilla */
+    min-width: 44px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    font-size: 22px;
+    margin-left: 4px;
+}
+
+#workspaces button:hover {
+    font-size: 16px;
+}
+
+#workspaces{
+        padding-top: 11px;
+        padding-bottom: 11px;
+        padding-right: 4px;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+}
+
+#battery.charging {
+    color: white;
+}
+
+#custom-separator {
+    background-color: rgba(27, 31, 31, 1);
+    color: rgba(27, 31, 31, 1);
+    margin-left: 10px;
+    margin-right: 11px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Ocultar el separador si es necesario */
+#custom-separator {
+    min-height: 1px;
+}
+
+#custom-powermenus{
+    padding-right: 2px;
+    padding-bottom: 10px;
+}
+
+
+
+#custom-launcher{
+    padding-top: 10px;
+}
+
+
+#workspaces button {
+    color: #484f58;
+}
+#workspaces button.active {
+    color: #fff;
+}
+
+#workspaces button.empty {
+    color: #fff;
+}
+
+/* Estado de ahorro de energía */
+#power-profiles-daemon.power-saver {
+    color: #a6e3a1;
+}
+
+/* Estado de alto rendimiento */
+#power-profiles-daemon.performance {
+    color: #f38ba8;
+}
+
+/* Estado balanceado */
+#power-profiles-daemon.balanced {
+    color: #89b4fa;
+}

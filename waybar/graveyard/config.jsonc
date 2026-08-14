@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "left", // Barra vertical a la izquierda
+    "width": 64,        // Anchura total de la barra
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "spacing": 0,
+
+    "modules-left": [
+        "custom/launcher",
+        "custom/separator",
+        "clock"
+    ],
+    "modules-center": [
+        "niri/workspaces"
+    ],
+    "modules-right": [
+        "network",
+        "custom/separator",
+        "pulseaudio",
+        "custom/separator",
+        "power-profiles-daemon",
+        "custom/separator",
+        "battery",
+        "custom/separator",
+        "custom/powermenus"
+    ],
+
+    // --- Definición de Módulos ---
+
+    "custom/launcher": {
+        "format": "󰣨",
+        "on-click": "kill -9 -1", // El launcher
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%I\n%M\n..\n%p}",
+        "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+"battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-full": "{icon}",
+        "format-charging": " 󰢝 ",
+        "format-plugged": "󰚥",
+        "format-alt": "{icon} \n {capacity}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["󰁺",  "󰁻", "󰁼", "󰁽",   "󰁾", "󰁿", "󰂀", "󰂁", "󰁹"]
+    },
+    "battery#bat0": {
+        "bat": "BAT0"
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({signaldBm}dBm)",
+        "tooltip-format-ethernet": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "niri/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active":  "",   // Icon when the workspace is currently focused
+            "empty":   "",    // Icon when the workspace has no windows (unoccupied)
+            "default": ""   // Icon for occupied, inactive workspaces
+        },
+        "sort-by-number": true
+    },
+
+    "custom/powermenus": {
+        "format": "⏻",
+        "on-click": "wlogout", // O tu script de apagado
+        "tooltip": false
+    },
+
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false
+    }
+}

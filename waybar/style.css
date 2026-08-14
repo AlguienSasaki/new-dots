@@ -1,190 +1,165 @@
+/* --- Estilos Globales --- */
 * {
-  border: none;
-  border-radius: 0;
-  min-height: 0;
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 12px;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
 }
 
+/* --- Caja Principal de la Barra --- */
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.25);
-
- /* transition-property: background-color; */
-  transition-duration: 0.5s;
+    /* Negro puro con 65% de transparencia */
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    /* Redondeado opcional para la barra entera */
 }
 
-window#waybar.hidden {
-  opacity: 0.5;
+/* --- Estilo de los Módulos ("Pastillas") --- */
+#clock,
+#power-profiles-daemon,
+#battery,
+#network,
+#pulseaudio,
+#custom-powermenus,
+#custom-launcher,
+#workspaces{
+    /* Dimensiones solicitadas: 44px de ancho */
+    min-width: 44px;
+    /* max-width: 44px; */
+    /* Padding lateral de 10px */
+    margin-left: 10px;
+    margin-right: 11px;
+    
+    /* Margen vertical para separarlas */
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* Fondo oscuro para la "pastilla" (puedes ajustarlo) */
+    background-color: rgba(27, 31, 31, 1);
+    border-radius: 22px; /* Redondeado total para forma de pastilla */
+    
+    /* Centrado del contenido */
+    /* text-align: center;*/
+    color: #ffffff;
 }
 
-#workspaces {
-  background-color: #404040;
-	border-radius: 4px;
-  	margin: 5px 3px;
 
+
+
+/* --- Los de abajo --- */
+
+#custom-launcher,
+#clock,
+#battery,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#custom-powermenus{
+    border-radius: 0px; /* Redondeado total para forma de pastilla */
+    color: #ffffff;
+}
+
+/* --- Ajustes específicos por módulo --- */
+
+#network{
+
+        padding-top: 11px;
+        padding-right: 4px;
+        border-radius: 22px 22px 0 0;
+
+}
+
+
+#clock {
+    border-radius: 0 0 22px 22px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 22px;
 }
 
 #workspaces button {
-	border-radius: 4px;
-	color:  #a9d4b8;
-	background: #404040;
-  	padding: 0px 10px;
-	box-shadow: none;
-  transition: all 0.3s ease-in-out;
+    padding: 0;
+    margin: 5px 0;
+    /* Ancho completo del botón dentro de la pastilla */
+    min-width: 44px;
+    color: #ffffff;
+    background-color: transparent;
 }
 
 #workspaces button.active {
-	color:  #fff;
-	background: inherit;
-  padding: 0px 15px;
-	animation: button_activate 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-#workspaces button.urgent {
-	color:  #fa9f8e;	
-	background: inherit;
-}
-
-#workspaces button.empty {
-	color:  #e1e1e1;
+    font-size: 22px;
+    margin-left: 4px;
 }
 
 #workspaces button:hover {
-	border: none;
-	background: radial-gradient(circle, rgba(25, 79, 255, 0.1) 20%, rgba(132,129,156,0) 30%);
+    font-size: 16px;
 }
 
-#workspaces button.active:hover, #workspaces button.urgent:hover {
-	background: inherit;
+#workspaces{
+        padding-top: 11px;
+        padding-bottom: 11px;
+        padding-right: 4px;
 }
 
-#cpu,
-#memory,
-#custom-power,
-#battery,
-#backlight,
-#pulseaudio,
-#network,
-#idle_inhibitor,
-#clock,
-#power-profiles-daemon,
-#tray {
-
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
-  background-color: #1e1e2e;
-  color: #181825;
-}
-
-#custom-power {
-  margin-right: 6px;
-}
-
-#custom-logo {
-  padding-right: 10px;
-  padding-left: 12px;
-  /*margin-left: 5px; */
-  margin: 4px 1px;
-  font-size: 18px;
-  background-color: #242933;
-  border-radius: 4px; 
-  color: #1793d1;
-}
-
-#memory {
-  background-color: #fab387;
-}
-
-#battery {
-  background-color: #8bd0f3;
-}
-
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-  background-color: #ff0000;
-  color: #FFFF00;
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
 }
 
 #battery.charging {
-  background-color: #a6e3a1;
-  color: #181825;
+    color: white;
 }
 
-#battery.format-full{
-  background-color: #a6e3a1;
-  color: #181825;
+#custom-separator {
+    background-color: rgba(27, 31, 31, 1);
+    color: rgba(27, 31, 31, 1);
+    margin-left: 10px;
+    margin-right: 11px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-#backlight {
-  background-color: #fab387;
+/* Ocultar el separador si es necesario */
+#custom-separator {
+    min-height: 1px;
 }
 
-#pulseaudio{
-  background-color: #f9e2af;
-}
-
-#pulseaudio.input.source-muted {
-  background: #a6e3a1;
-}
-
-#pulseaudio.input{
-  background: red;
+#custom-powermenus{
+    padding-right: 2px;
+    padding-bottom: 10px;
 }
 
 
 
-#cpu,
-#power-profiles-daemon,
-#network 
-{
-  background-color: #94e2d5;
-  padding-right: 17px;
+#custom-launcher{
+    padding-top: 10px;
 }
 
-#power-profiles-daemon.performance {
-    background-color: #f38ba8;
-    color: #181825;
+
+#workspaces button {
+    color: #484f58;
+}
+#workspaces button.active {
+    color: #fff;
 }
 
-#idle_inhibitor.deactivated{
-    background-color: #e1e1e1;
-    color: #181825;
-
-}
-#power-profiles-daemon.balanced {
-    background-color: #94e2d5;
-    color: #181825;
+#workspaces button.empty {
+    color: #fff;
 }
 
-#idle_inhibitor.activated{
-    background-color: #404040;
-    color: #e1e1e1;
-}
-
+/* Estado de ahorro de energía */
 #power-profiles-daemon.power-saver {
-    background-color: #a6e3a1;
-    color: #000000;
-}
-#clock {
-  font-family: JetBrainsMono Nerd Font;
-  background-color: #cba6f7;
+    color: #a6e3a1;
 }
 
-#custom-power {
-  background-color: #f2cdcd;
+/* Estado de alto rendimiento */
+#power-profiles-daemon.performance {
+    color: #f38ba8;
 }
 
-
-tooltip {
-  border-radius: 8px;
-  padding: 15px;
-  background-color: #131822;
-}
-
-tooltip label {
-  padding: 5px;
-  background-color: #131822;
+/* Estado balanceado */
+#power-profiles-daemon.balanced {
+    color: #89b4fa;
 }
