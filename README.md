@@ -1,6 +1,11 @@
 # New Dotfiles!!!
 
-![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/1.png  "Captura incial")
+I really like [Niri WM](https://github.com/niri-wm/niri) but because is wayland only, I couldn't reuse my 
+[old Dotfiles](https://github.com/AlguienSasaki/Dotfiles) so, here I am trying to adapt to niri and the new enviroment
+
+![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/6.png  "Presentación Graveyard Revival")
+
+![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/1.png  "Presentación Colorfull")
 
 ---
 
@@ -23,20 +28,28 @@
 
 ---
 
-## Even More Screenshots
+## 2 Different themes (for now)
 
-![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/2.png  "Captura incial")
+For now this is all, but I'm sure I'll end up bringing some of my old BSPWM themes to niri.
 
+## Colorfull theme
+
+Honestly I don't remember what the idea behind this theme was, but I still like it.
 
 ![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/3.png  "Captura incial")
 
 ![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/4.png  "Captura incial")
 
-![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/5.png  "Captura incial")
+## Graveyard Revival theme
+
+This is a readaptation from my favorite BSPWM theme, I don't remember exactly why the name is "Graveyard" but I'm sure 14 years old me taught this was the coolest thing ever.
+Initially I wanted to just call this "Graveyard" but I think it's kinda funny the new one.
+
+![Alt text](https://raw.githubusercontent.com/AlguienSasaki/new-dots/main/screenshots/6.png  "Un viejo conocido vuelve")
 
 ## Credits
 
-I didn't write all the code by myself, I took inspiration from other projects and dotfiles, but I heavily moddified them in order to adapted them to my needs and preferences
+I didn't write all the code by myself, I took inspiration from other projects and dotfiles, but I moddified them in order to adapted them to my needs and preferences
 
 * **Waybar**: [sameemul-haque's dotfiles](https://github.com/sameemul-haque/dotfiles/tree/mocha) + [nomeacuerdo](enlace ).
 I started my waybar setup using his config and some modules from the defaults.
