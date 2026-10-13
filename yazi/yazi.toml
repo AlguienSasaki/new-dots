@@ -1,0 +1,15 @@
+[mgr]
+sort_by = "mtime"
+sort_reverse = true
+sort_dir_first = true
+
+[plugin]
+prepend_previewers = [
+    { mime = "audio/*",   run = "exifaudio"}
+]
+
+[manager]
+prepend_keymap = [
+    { on = [ "u" ], run = ''' shell --confirm 'wl-copy --type image/png < "$@"' ''', desc = "Copiar imagen real al portapapeles" }
+]
+
