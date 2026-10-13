@@ -3,6 +3,7 @@
 
 ## Des-ignorar el .gitignore
 !.gitignore
+!.gitmodules
 
 ## Des-ignorar lo que sí quiero guardar.
 
