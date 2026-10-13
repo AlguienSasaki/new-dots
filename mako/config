@@ -1,0 +1,81 @@
+# ─────────────────────────────────────────────
+# Mako - Niri
+# Theme: dark / muted / warm
+# ─────────────────────────────────────────────
+
+# ── General ──────────────────────────────────
+
+font=JetBrains Mono 10
+
+background-color=#111715ee
+text-color=#d6d3ca
+border-color=#b56b58cc
+
+border-size=1
+border-radius=8
+
+padding=12
+margin=12
+
+width=360
+height=120
+
+default-timeout=5000
+ignore-timeout=0
+
+max-visible=5
+
+sort=-time
+
+layer=overlay
+anchor=top-right
+
+
+# ── Text ─────────────────────────────────────
+
+format=<b>%s</b>\n%b
+
+markup=1
+
+icons=1
+max-icon-size=48
+
+
+# ── Actions ──────────────────────────────────
+
+on-button-left=dismiss
+on-button-middle=none
+on-button-right=dismiss-all
+
+
+# ── Progress bars ────────────────────────────
+
+progress-color=#b56b58cc
+
+
+# ── Urgency: Low ─────────────────────────────
+
+[urgency=low]
+background-color=#111715dd
+text-color=#aaa9a1
+border-color=#5f6863aa
+default-timeout=3000
+
+
+# ── Urgency: Normal ──────────────────────────
+
+[urgency=normal]
+background-color=#111715ee
+text-color=#d6d3ca
+border-color=#b0a48caa
+default-timeout=5000
+
+
+# ── Urgency: Critical ────────────────────────
+
+[urgency=critical]
+background-color=#191211f5
+text-color=#e0d9cf
+border-color=#b56b58
+border-size=2
+default-timeout=0

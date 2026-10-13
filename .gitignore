@@ -1,4 +1,3 @@
-alacritty/
 audacity/
 autostart/
 bashtop/
@@ -14,15 +13,12 @@ GIMP/
 glib-2.0/
 go/
 goa-1.0/
-gtk-3.0/
-gtk-4.0/
 htop/
 ibus/
 kdenlive-layoutsrc/
 kdenliverc/
 libfm/
 libreoffice/
-mako/
 mimeapps.list/
 mpv/
 nautilus/
@@ -38,9 +34,6 @@ QtProject.conf/
 REAPER/
 retroarch/
 rncbc.org/
-rofi/
-scripts/
-Scripts/
 simple-scan/
 smassh/
 spek/
