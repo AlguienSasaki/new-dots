@@ -8,6 +8,8 @@ workspace "2"
 workspace "3"
 workspace "4"
 
+spawn-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+spawn-at-startup "waybar"
 spawn-at-startup "/usr/lib/xdg-desktop-portal-gnome"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "~/.bin/lock.sh" 
@@ -15,6 +17,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "~/wal.sh"
 spawn-at-startup "swaync"
 spawn-at-startup "eww" "daemon"
+spawn-at-startup "swayidle" "-w" "timeout" "500" "systemctl" "suspend"
 //spawn-at-startup "xsettingsd" "/home/alguien/.config/xsettingsd/xsettingsd.conf"
 //spawn-at-startup "~/.bin/startup-processes.sh"
 // Or, if you built it by hand:
@@ -38,10 +41,16 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     //aquiw
-    Mod+Return cooldown-ms=150 hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+Return cooldown-ms=150 hotkey-overlay-title="Open a Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Space hotkey-overlay-title="Run an Application: Rofi" { spawn "rofi" "-i" "-show-icons" "-no-lazy-grab" " -dpi" "95" "-show" "drun" "-modi" "drun" "-theme" "~/.config/rofi/config.rasi"; }  //{ spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: Hyprlock" { spawn "systemctl" "suspend" ; }
 
+
+    // Cerrar la notificación más reciente
+    Ctrl+Space { spawn "makoctl" "dismiss"; }
+
+    // Cerrar todas las notificaciones activas a la vez
+    Ctrl+Shift+Space { spawn "makoctl" "dismiss" "-a"; }
     Mod+N {spawn "~/wal.sh";}
     Mod+V {spawn "~/.bin/cliphist-fuzzel-img";}
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
@@ -60,9 +69,9 @@ binds {
     // Brightness configuration
     Mod+XF86MonBrightnessUP allow-when-locked=true {spawn "brightnessctl" "set" "100%" ;}
     Mod+XF86MonBrightnessDown allow-when-locked=true {spawn "brightnessctl" "set" "0%" ;}
-    XF86MonBrightnessUP allow-when-locked=true {spawn "~/.bin/brightness" "--inc" ;}
+    XF86MonBrightnessUP allow-when-locked=true {spawn "brightnessctl" "set" "10%+" ;}
     
-    XF86MonBrightnessDown allow-when-locked=true {spawn "~/.bin/brightness" "--dec" ;}
+    XF86MonBrightnessDown allow-when-locked=true {spawn "brightnessctl" "set" "10%-" ;}
     Mod+Shift+XF86Tools {spawn "shutdown" "-h" "now" ;} 
     XF86Tools cooldown-ms=250{spawn "~/.bin/powermenu"  ;} 
     XF86Favorites cooldown-ms=250{spawn "hyprlock" ;}
@@ -72,13 +81,16 @@ binds {
 
     XF86Keyboard {spawn "~/.bin/turn-keyboard.sh"; }  // alterna entre us y us(intl)
     //XF86Keyboard{spawn "notify-send" "a" ;}
-    Ctrl+Space {spawn "swaync-client" "--hide-all";}
+    //Ctrl+Space {spawn "swaync-client" "--hide-all";}
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
 
     Mod+Q { close-window; }
-    Mod+Shift+Q { spawn "~/.bin/niri-kill-window.sh"; }
+    Mod+Shift+Q { spawn "killall" "niri" ;}
+    Mod+o { spawn "~/.bin/rofi-otp" ;}
+    Mod+p { spawn "rofi-pass" ;}
+    //Mod+Shift+Q { spawn "~/.bin/niri-kill-window.sh"; }
     
 
 
@@ -268,7 +280,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { spawn "zen-browser"; }
+    Mod+W { spawn "google-chrome"; }
     Mod+Shift+W { spawn "firefox" "--private-window"; }
 
     // Actions to switch layouts.
@@ -311,7 +323,6 @@ environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
     DISPLAY ":0"
-    GDK_SCALE "0.5"
     GDK_DPI_SCALE "1"
     QT_SCALE_FACTOR "1"
     QT_AUTO_SCREEN_SCALE_FACTOR "0"
@@ -330,7 +341,7 @@ environment {
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/Screenshot From %Y-%m-%d %H-%M-%S.png"
 
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
@@ -344,6 +355,13 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
+
+output "HDMI-A-2" {
+        mode "1920x1080@75"
+        position x=0 y=0
+
+}
+
 output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
@@ -354,10 +372,11 @@ output "eDP-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@60"
+    mode "13688x768@60"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1.25
+    // scale 0.75
+    scale 1
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -372,19 +391,21 @@ output "eDP-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=768 y=0
+    //position x=0 y=1080 // para monitor arriba y pantall lap abajo
+    //position x=0 y=0 // Normal
+    position x=1280 y=0
 }
 
 
-output "DP-3" {
-        mode "1366x768@60.00"
-        transform "90"
-        position x=0 y=0
-}
-
+//output "DP-3" {
+//        mode "1366x768@60.00"
+//        transform "90"
+//        position x=0 y=0
+//}
+//
 output "DP-1" {
         mode "1280x1024@75.025"
-        position x=1920 y=0
+        position x=0 y=0
 
 }
 
@@ -451,9 +472,20 @@ window-rule {
 }
 
 window-rule {
-	match app-id="com.mitchellh.ghostty"
-	default-column-width { proportion 0.65; }
+	match app-id="Alacritty"
+	default-column-width { proportion 0.7; }
 }
+
+// Definir una ventana con dimensiones físicas fijas para opengl con python
+window-rule {
+	match app-id="Piramide.py"
+        default-column-width { fixed 900; }
+        default-window-height { fixed 600; }
+        open-floating true
+        open-focused true
+
+}
+
 
 window-rule {
 	match app-id="firefox"
@@ -476,19 +508,12 @@ window-rule {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 input {
    keyboard {
-        xkb {
-        layout "us,us"
-        variant ",intl"    // You can set rules, model, layout, variant and options.
-        //options "grp:XF86Keyboard_toggle"
+       xkb {
+        layout "us"
+        variant "intl"
+    } 
 
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-        }
-
-        track-layout "global"
+                track-layout "global"
         // Enable numlock on startup, omitting this setting disables it.
         numlock
     }
@@ -496,7 +521,7 @@ input {
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
     touchpad {
-        // off
+        off
         tap
         // dwt
         // dwtp
@@ -520,7 +545,7 @@ input {
     trackpoint {
        //  off
          //natural-scroll
-         accel-speed 0.01
+         accel-speed 1.0
         // accel-profile "flat"
         // scroll-method "on-button-down"
         // scroll-button 273
@@ -688,3 +713,6 @@ hot-corners {
     }
 }
 
+switch-events {
+    lid-close { spawn "hyprlock"; }
+}

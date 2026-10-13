@@ -9,7 +9,7 @@
 /* --- Caja Principal de la Barra --- */
 window#waybar {
     /* Negro puro con 65% de transparencia */
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.55);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -29,8 +29,8 @@ window#waybar {
     min-width: 44px;
     /* max-width: 44px; */
     /* Padding lateral de 10px */
-    margin-left: 10px;
-    margin-right: 11px;
+    margin-left: 10px; /*10px*/
+    margin-right: 11px; /*11px*/
     
     /* Margen vertical para separarlas */
     margin-top: 0px;
@@ -138,14 +138,14 @@ window#waybar {
 }
 
 
-#workspaces button {
+#workspaces button.empty {
     color: #484f58;
 }
 #workspaces button.active {
     color: #fff;
 }
 
-#workspaces button.empty {
+#workspaces button{
     color: #fff;
 }
 
